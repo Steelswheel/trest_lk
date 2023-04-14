@@ -1,0 +1,10 @@
+.toggle-custom {
+    &-button {
+        width: 18px;
+        height: 16px;
+        background-image: url('./icons/bars.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,113 @@
+.stages {
+    color: $text-primary;
+    
+    &-head-buttons {
+        margin-bottom: 18px;
+
+        @media all and (max-width: 767px) {
+            margin-bottom: 10px;
+        }
+    }
+    
+    &-item {
+        border: none!important;
+        background-color: $grey-light-3;
+        border-radius: 3px;
+
+        &-wrapper {
+            margin: 4px 0;
+            border-radius: 3px;
+        }
+
+        &-label {
+            @include fz-4;
+
+            @media all and (max-width: 767px) {
+                font-size: 15px;
+                line-height: 17px;
+                max-width: 85%;
+            }
+        }
+
+        &-active {
+            background: $main-gradient;
+
+            .stages-item-edit {
+                border: 1px solid white;
+
+                i {
+                    color: white;
+                }
+            }
+        }
+
+        &-edit {
+            width: 20px;
+            height: 20px;
+            border: 1px solid $grey-dark;
+            border-radius: 3px;
+
+            i {
+                color: $grey-dark;
+                font-size: 11px;
+            }
+        }
+    }
+
+    .ant-collapse {
+        border: none;
+        border-radius: 3px;
+
+        &-header {
+            @media all and (max-width: 767px) {
+                padding: 9px 10px!important;
+            }
+        }
+
+        &-content {
+            border: none;
+
+            &-box {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        &-item {
+            border: none;
+            border-radius: 3px!important;
+        }
+
+        &-expand-icon {
+            svg {
+                path {
+                    fill: $main;
+                }
+            }
+        }
+
+        & > .ant-collapse-item > .ant-collapse-header {
+            border-radius: 3px!important;
+        }
+
+        &-item {
+            & > .ant-collapse-header .ant-collapse-arrow {
+                vertical-align: 1px!important;
+            }
+        }
+
+        &.active {
+            .ant-collapse-header * {
+                color: white!important;
+            }
+
+            .ant-collapse-expand-icon {
+                svg {
+                    path {
+                        fill: white!important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.news {
+    &-detail {
+        &-title {
+            @include fz-2;
+            color: $text-primary;
+        }
+
+        &-image {
+            width: 30%;
+            margin: 0 20px 0 0;
+        }
+
+        &-date {
+            @include fz-4;
+            color: $text-primary;
+
+            @media all and (max-width: 767px) {
+                font-size: 13px;
+                line-height: 15px;
+            }
+        }
+
+        &-link {
+            color: $main!important;
+            font-size: $fz-4;
+
+            @media all and (max-width: 767px) {
+                font-size: 13px;
+                line-height: 15px;
+            }
+        }
+
+        @media all and (max-width: 767px) {
+            &-image {
+                width: 100%;
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+
+    &-main {
+        .news-card {
+            background: $main-gradient;
+            max-width: 586px;
+            margin: 0 auto;
+
+            &-image {
+                width: 90px;
+                height: 90px;
+            }
+
+            &-title {
+                color: white!important;
+            }
+
+            &-text {
+                * {
+                    color: white!important;
+                }
+            }
+
+            &-date {
+                color: white;
+            }
+        }
+    }
+
+    &-card {
+        padding: 30px;
+        background-color: white;
+        border-radius: 7px;
+        height: 100%;
+
+        &-image {
+            width: 80px;
+            height: 80px;
+            background-color: $grey-2;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-right: 15px;
+            border-radius: 7px;
+            flex-shrink: 0;
+
+            @media all and (max-width: 767px) {
+                width: 95px;
+                height: 95px;
+                margin: 0 auto 15px auto;
+            }
+        }
+
+        &-content {
+            flex: 1;
+        }
+
+        &-title {
+            font-size: $fz-5;
+            line-height: 16px;
+            font-weight: 700;
+            color: $main!important;
+
+            @media all and (max-width: 767px) {
+                text-align: center;
+                font-size: 13px;
+                line-height: 15px;
+            }
+        }
+
+        &-date {
+            color: $text-primary;
+            @include fz-5;
+
+            @media all and (max-width: 767px) {
+                font-size: 9px;
+                line-height: 10px;
+                text-align: center;
+            }
+        }
+
+        &-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            * {
+                text-align: justify;
+                margin-top: 10px;
+                line-height: 16px;
+                @include fz-5;
+                color: $text-primary;
+
+                @media all and (max-width: 767px) {
+                    font-size: 11px!important;
+                    line-height: 13px!important;
+                }
+            }
+        }
+    }
+}

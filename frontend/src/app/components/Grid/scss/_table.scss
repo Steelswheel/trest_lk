@@ -1,0 +1,28 @@
+.grid-table {
+    box-shadow: 0 7px 21px rgb(83 92 105 / 12%), 0 -1px 6px 0 rgb(83 92 105 / 6%);
+    border-radius: 2px;
+    margin-bottom: 0.05rem;
+
+    .ant-table-header.ant-table-sticky-holder {
+        top: calc(10px + var(--kt-toolbar-height))!important;
+
+        @media all and (max-width: 991px) {
+            top: 0!important;
+        }
+    }
+
+    .ant-table-cell {
+        font-size: 12px;
+        line-height: 120%;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .ant-table-header .ant-table-cell {
+        font-weight: bold;
+    }
+
+    &-wrapper {
+        max-width: 100%;
+    }
+}

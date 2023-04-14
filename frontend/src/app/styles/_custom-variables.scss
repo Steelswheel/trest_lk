@@ -1,0 +1,97 @@
+$text-primary: #3F4354;
+$background: #F1F4F6;
+$success: #56CC8B;
+$main: #8757E8;
+$main-light: #936CF1;
+$main-light-2: #EDE4FF;
+$grey: #E9E9ED;
+$grey-2: #BABED0;
+$grey-light: #F8F8F8;
+$grey-light-2: #EFF0F7;
+$grey-light-3: #E1E0FF;
+$grey-dark: #7E8398;
+$red: #F1416C;
+$main-gradient: linear-gradient(88.21deg, #5777E8 -20.52%, #8757E8 61.38%);
+
+$fz-1: 28px;
+$fz-2: 20px;
+$fz-3: 18px;
+$fz-4: 15px;
+$fz-5: 14px;
+$fz-6: 12px;
+
+$transition: all 0.3s;
+
+@mixin fz-1 {
+    font-size: $fz-1;
+    font-weight: 700;
+}
+
+@mixin fz-2 {
+    font-size: $fz-2;
+    font-weight: 700;
+}
+
+@mixin fz-3 {
+    font-size: $fz-3;
+    font-weight: 700;
+}
+
+@mixin fz-4 {
+    font-size: $fz-4;
+    font-weight: 700;
+}
+
+@mixin fz-5 {
+    font-size: $fz-5;
+    font-weight: normal;
+}
+
+@mixin fz-6 {
+    font-size: $fz-6;
+    font-weight: normal;
+}
+
+@mixin scrollbar-main {
+    &::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+
+        @media all and (max-width: 767px) {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;        /* цвет дорожки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $grey-2;    /* цвет плашки */
+        border-radius: 100px;       /* закругления плашки */
+        border: 2px solid $main;  /* padding вокруг плашки */
+    }
+}
+
+@mixin scrollbar {
+    &::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+
+        @media all and (max-width: 767px) {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        background: white;        /* цвет дорожки */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $grey-2;    /* цвет плашки */
+        border-radius: 100px;       /* закругления плашки */
+        border: 2px solid white;  /* padding вокруг плашки */
+    }
+}

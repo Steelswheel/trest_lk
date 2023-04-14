@@ -1,0 +1,158 @@
+.edz-header {
+    position: relative;
+    padding: 48px!important;
+    color: $text-primary;
+
+    @media all and (max-width: 767px) {
+        padding: 16px!important;
+
+        &-edit {
+            margin-top: 8px;
+        }
+    }
+
+    &-header {
+        @media all and (max-width: 767px) {
+            display: block!important;
+        }
+    }
+
+    &-ribbon {
+        position: absolute;
+        top: -15px;
+        left: 48px;
+        width: 154px;
+        height: 34px;
+        border-radius: 0 0 5px 5px;
+
+        span {
+            color: white;
+            @include fz-4;
+
+            @media all and (max-width: 767px) {
+                font-size: 13px;
+            }
+        }
+
+        @media all and (max-width: 767px) {
+            width: 122px;
+            height: 25px;
+            left: 16px;
+            top: -5px;
+            border-radius: 0 0 3px 3px;
+        }
+    }
+
+    &-name {
+        color: $main;
+        @include fz-1;
+        margin-right: 30px;
+
+        @media all and (max-width: 767px) {
+            margin-top: 16px;
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+
+    &-contacts {
+        margin-top: 8px;
+
+        &-wrap {
+            @media all and (min-width: 768px) {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        @media all and (max-width: 767px) {
+            margin-top: 10px;
+        }
+
+        i {
+            color: $main;
+            font-size: $fz-5;
+
+            @media all and (max-width: 767px) {
+                font-size: 11px;
+                line-height: 200%;
+            }
+        }
+
+        &-item {
+            margin: 5px;
+
+            a {
+                @include fz-2;
+                color: $text-primary!important;
+
+                @media all and (max-width: 767px) {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+            }
+
+            @media all and (max-width: 767px) {
+                margin-top: 3px;
+            }
+        }
+    }
+
+    &-footer {
+        margin-top: 8px;
+
+        @media all and (max-width: 767px) {
+            margin: 8px 0;
+        }
+    }
+
+    &-title {
+        @include fz-4;
+
+        @media all and (max-width: 767px) {
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+
+    &-content {
+        position: relative;
+        @include fz-3;
+        color: $main;
+
+        @media all and (max-width: 767px) {
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+
+    &-sub {
+        @include fz-6;
+        margin-top: -5px;
+
+        @media all and (max-width: 767px) {
+            font-size: 11px;
+            margin-top: 0;
+        }
+    }
+
+    &-sum {
+        .edz-header-content {
+            padding-left: 11px;
+            &:before {
+                content: '₽';
+                position: absolute;
+                @include fz-6;
+                left: 0;
+
+                @media all and (max-width: 767px) {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    &-tranches {
+        margin-top: 10px;
+    }
+}

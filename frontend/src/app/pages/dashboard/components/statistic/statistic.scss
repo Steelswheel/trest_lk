@@ -1,0 +1,58 @@
+.dashboard-statistic {
+    grid-area: statistic;
+
+    &-chart {
+        height: 179px;
+
+        @media all and (max-width: 767px) {
+            height: 106px;
+        }
+
+        &-legend {
+            @media all and (max-width: 767px) {
+                display: none;
+            }
+
+            &-mobile {
+                display: none;
+
+                @media all and (max-width: 767px) {
+                    display: block;
+                }
+            }
+
+            svg {
+                g {
+                    & > rect {
+                        &:nth-child(1) {
+                            width: 64px;
+                        }
+
+                        &:nth-child(2) {
+                            width: 64px;
+                            height: 3px;
+                            y: 3;
+                        }
+                    }
+                    
+                    & > text {
+                        transform: translateX(16%);
+                        font-size: 14px!important;
+                    }
+
+                    &:nth-child(3) {
+                        rect {
+                            &:nth-child(2) {
+                                fill: none;
+                                stroke: #99999B;
+                                stroke-width: 1px;
+                                height: 1px;
+                                stroke-dasharray: 3.08%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

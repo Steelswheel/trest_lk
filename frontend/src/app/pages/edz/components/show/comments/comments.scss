@@ -1,0 +1,160 @@
+.comments {
+    width: 100%;
+    color: $text-primary;
+    
+    textarea {
+        padding-right: 75px!important;
+
+        @media all and (max-width: 767px) {
+            font-size: 13px!important;
+            min-height: 78px!important;
+
+            padding: 9px 36px 9px 9px!important;
+        }
+    }
+
+    &-form {
+        position: relative;
+
+        &-buttons {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            right: 18px;
+
+            @media all and (max-width: 767px) {
+                display: block;
+                right: 9px;
+                bottom: 9px;
+            }
+
+            &-files, &-send {
+                @include fz-2;
+                cursor: pointer;
+
+                @media all and (max-width: 767px) {
+                    font-size: 21px;
+                }
+            }
+
+            &-files {
+                color: $grey-2;
+                transition: $transition;
+                margin-right: 9px;
+
+                &:hover {
+                    color: $main;
+                }
+
+                @media all and (max-width: 767px) {
+                    margin-right: 0;
+                    margin-bottom: 16px;
+                }
+            }
+
+            &-send {
+                color: $main;
+            }
+        }
+    }
+
+    &-content {
+        margin-top: 10px;
+
+        @media all and (max-width: 767px) {
+            margin-top: 8px;
+        }
+    }
+
+    &-item {
+        margin: 4px 0;
+
+        &-content {
+            flex: 1;
+            background-color: $grey-light;
+            border-radius: 3px;
+            padding: 9px;
+        }
+
+        &-image {
+            margin-right: 12px;
+            width: 27px;
+            height: 27px;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 50%;
+
+            @media all and (max-width: 767px) {
+                margin-right: 8px;
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        &-name {
+            @include fz-5;
+            font-weight: 700;
+            color: $main;
+
+            @media all and (max-width: 767px) {
+                font-size: 11px;
+                line-height: 13px;
+            }
+        }
+
+        &-date {
+            @include fz-5;
+            color: $grey-2;
+
+            @media all and (max-width: 767px) {
+                font-size: 11px;
+                line-height: 13px;
+            }
+        }
+
+        &-text {
+            margin-top: 5px;
+
+            &-show {
+                cursor: pointer;
+                color: $main;
+                @include fz-6;
+
+                @media all and (max-width: 767px) {
+                    font-size: 11px;
+                    line-height: 13px;
+                }
+            }
+
+            @media all and (max-width: 767px) {
+                margin-top: 3px;
+                font-size: 13px;
+                line-height: 15px;
+            }
+        }
+
+        .hidden-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 15;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media all and (max-width: 767px) {
+                -webkit-line-clamp: 7;
+            }
+        }
+    }
+
+    &-show-other {
+        margin-top: 8px;
+        @include fz-4;
+        color: $grey-dark;
+        cursor: pointer;
+
+        @media all and (max-width: 767px) {
+            font-size: 11px;
+            line-height: 13px;
+        }
+    }
+}

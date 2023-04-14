@@ -1,0 +1,115 @@
+.dashboard-news {
+    grid-area: news;
+    height: 320px;
+    border-radius: 7px;
+    background: $main-gradient;
+    color: white;
+
+    @media all and (max-width: 767px) {
+        padding: 16px;
+        border-radius: 5px;
+        height: 241px;
+    }
+
+    .dashboard-card-content {
+        height: 100%;
+    }
+    
+    &-image {
+        border-radius: 7px 7px 0 0;
+        position: relative;
+        height: 50%;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        @media all and (max-width: 767px) {
+            border-radius: 5px 5px 0 0;
+        }
+    }
+
+    &-title {
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include fz-3;
+        color: white!important;
+
+        @media all and (max-width: 767px) {
+            left: 16px;
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+
+    &-content {
+        height: 50%;
+        padding: 20px 40px 30px 40px;
+
+        @media all and (max-width: 767px) {
+            padding: 16px;
+        }
+
+        &-text {
+            text-align: justify;
+            margin-top: 10px;
+            @include fz-5;
+            line-height: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: white!important;
+
+            * {
+                color: white!important;
+                text-align: justify;
+                margin-top: 10px;
+                @include fz-5;
+                line-height: 16px!important;
+            }
+
+            @media all and (max-width: 767px) {
+                font-size: 11px!important;
+                line-height: 13px!important;
+
+                * {
+                    font-size: 11px!important;
+                    line-height: 13px!important;
+                }
+            }
+        }
+    }
+
+    &-link {
+        color: white;
+        @include fz-5;
+        font-weight: 700;
+
+        &:hover {
+            color: white;
+        }
+
+        @media all and (max-width: 767px) {
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+
+    &-date {
+        @include fz-5;
+        font-weight: 700;
+
+        @media all and (max-width: 767px) {
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+}

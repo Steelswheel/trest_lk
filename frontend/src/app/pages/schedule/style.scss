@@ -1,0 +1,94 @@
+.schedule {
+    &-image-wrapper {
+        width: fit-content;
+        position: relative;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+        img {
+            max-width: 100%!important;
+            filter: brightness(60%);
+            transition: all .3s;
+        }
+
+        svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 20%;
+            height: 20%;
+            fill: white;
+            z-index: 2;
+        }
+
+        &:hover {
+            img {
+                filter: brightness(100%);
+            }
+
+            svg {
+                z-index: unset;
+            }
+        }
+    }
+
+    &-content {
+        .ant-collapse {
+            border: none;
+
+            .ant-collapse-item {
+                border: none!important;
+
+                &.ant-collapse-item-active {
+                    border: 2px solid $main!important;
+                }
+            }
+        }
+    }
+
+    &-item {
+        background-color: $grey-light-3;
+        border-radius: 7px!important;
+
+        .ant-collapse-content {
+            border-top: none!important;
+            border-radius: 0 0 7px 7px!important;
+        }
+
+        .ant-collapse-header-text {
+            font-size: 16px;
+            color: $text-primary;
+            font-weight: 700;
+        }
+
+        .ant-collapse-expand-icon {
+            svg {
+                height: 14px;
+
+                path {
+                    stroke: $main;
+                    stroke-width: 150;
+                }
+            }
+        }
+
+        &.ant-collapse-item-active {
+            background: $main-gradient;
+
+            .ant-collapse-header-text {
+                color: white;
+            }
+
+            .ant-collapse-expand-icon {
+                svg {
+                    height: 14px;
+                    
+                    path {
+                        stroke: white;
+                        stroke-width: 150;
+                    }
+                }
+            }
+        }
+    }
+}

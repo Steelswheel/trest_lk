@@ -1,0 +1,10 @@
+.clock {
+    color: $text-primary;
+    font-size: 24px;
+    line-height: 28px;
+
+    @media all and (max-width: 767px) {
+        font-size: $fz-3;
+        line-height: 21px;
+    }
+}

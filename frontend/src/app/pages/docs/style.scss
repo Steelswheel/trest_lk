@@ -1,0 +1,30 @@
+.docs {
+    &-card {
+        background-color: white;
+        padding: 15px 30px;
+        height: 100%;
+
+        &-icon {
+            margin-right: 15px;
+
+            svg {
+                width: 33px;
+                height: 44px;
+
+                path {
+                    fill: $main;
+                }
+            }
+        }
+
+        &-name {
+            color: $text-primary;
+            font-size: $fz-4;
+            transition: $transition;
+
+            &:hover {
+                color: $main;
+            }
+        }
+    }
+}

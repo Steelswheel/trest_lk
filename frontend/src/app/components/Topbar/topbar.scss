@@ -1,0 +1,13 @@
+@import './clock/clock';
+@import './chat/chat';
+@import './user/user';
+
+.topbar-custom {
+    &-item {
+        margin: 0 15px;
+
+        @media all and (max-width: 767px) {
+            margin: 0 10px;
+        }
+    }
+}

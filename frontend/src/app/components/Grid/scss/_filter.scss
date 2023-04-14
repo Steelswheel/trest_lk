@@ -1,0 +1,82 @@
+.grid-filter {
+    position: relative;
+    display: inline-block;
+
+    &-input {
+        outline: none;
+        width: 100%;
+    }
+
+    &-modal {
+        width: 400px;
+        position: absolute;
+        right: -1rem;
+        transform: translateX(100%);
+        display: inline-block;
+        border-radius: 2px;
+        border: 1px solid var(--kt-gray-400)!important;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 7px 21px rgb(83 92 105 / 12%), 0 -1px 6px 0 rgb(83 92 105 / 6%)!important;
+        z-index: 99;
+
+        &-content {
+            max-height: 300px;
+            overflow-y: auto;
+
+            @media all and (max-width: 559px) {
+                max-height: 50vh;
+            }
+        }
+
+        .ant-picker {
+            width: 100%;
+        }
+
+        @media all and (max-width: 559px) {
+            width: 270px;
+            right: unset;
+            top: 4rem;
+            left: 0;
+            transform: unset;
+        }
+    }
+
+    &-mobile-date {
+        display: none;
+        font-size: 12px; 
+    }
+
+    @media all and (max-width: 559px) {
+        &-mobile-date {
+            display: flex;
+            align-items: center;
+            
+            &-item {
+                margin-right: 1rem;
+            }
+        }
+
+        &-date {
+            display: none;
+
+            & > input {
+                font-size: 12px!important;
+            }
+        }
+
+        .ant-picker-range-separator {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    &-button {
+        font-size: 11px;
+        line-height: 100%;
+    }
+
+    &-buttons {
+        border-top: 1px solid var(--kt-gray-400);
+    }
+}

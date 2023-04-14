@@ -1,0 +1,57 @@
+//Components styles
+@import './../../styles/custom-variables';
+@import './../../components/Grid/style.scss';
+@import './../../components/LoanRequest/style.scss';
+@import './components/show/comments/comments.scss';
+@import './components/show/stages/stages.scss';
+@import './components/show/header/header.scss';
+
+.edz-list {
+    td {
+        @include fz-6;
+
+        * {
+            @include fz-6;
+        }
+    }
+
+    th {
+        background-color: $main-light-2!important;
+
+        * {
+            background-color: $main-light-2!important;
+        }
+    }
+
+    &-comments {
+        &-item.hidden {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.edz-show {
+    .header-wrap {
+        @media all and (max-width: 767px) {
+            order: 1;
+        }
+    }
+
+    .comments-wrap {
+        @media all and (max-width: 767px) {
+            display: flex;
+            order: 2;
+        }
+    }
+
+    .stages-wrap {
+        @media all and (max-width: 767px) {
+            display: flex;
+            order: 3;
+        }
+    }
+}

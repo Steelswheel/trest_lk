@@ -1,0 +1,65 @@
+.wrap-item {
+    display: grid;
+    grid-template: "label input" 100%/40%;
+
+    &-label {
+        grid-area: label;
+    }
+
+    &-input {
+        grid-area: input;
+
+        &-borrower-passport {
+            display: grid;
+            grid-template:
+            "d1 d1" auto
+            "d2 d3" auto
+            "d4 d5" auto
+            "d6 d6" auto
+            "d7 d7" auto
+            "d8 d8" auto
+            "d9 d9" auto
+            "d10 d10" auto / 50% 50%;
+
+            & > div:nth-child(1) {
+                grid-area: d1;
+            }
+
+            & > div:nth-child(2) {
+                grid-area: d2;
+            }
+
+            & > div:nth-child(3) {
+                grid-area: d3;
+            }
+
+            & > div:nth-child(4) {
+                grid-area: d4;
+            }
+
+            & > div:nth-child(5) {
+                grid-area: d5;
+            }
+
+            & > div:nth-child(6) {
+                grid-area: d6;
+            }
+
+            & > div:nth-child(7) {
+                grid-area: d7;
+            }
+
+            & > div:nth-child(8) {
+                grid-area: d8;
+            }
+
+            & > div:nth-child(9) {
+                grid-area: d9;
+            }
+
+            & > div:nth-child(10) {
+                grid-area: d10;
+            }
+        }
+    }
+}

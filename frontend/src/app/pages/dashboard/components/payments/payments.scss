@@ -1,0 +1,112 @@
+.dashboard-payments {
+    grid-area: payments;
+
+    .dashboard-card {
+        background: $main-gradient;
+
+        &-header {
+            color: white;
+        }
+
+        &-content-wrap {
+            @include scrollbar-main;
+
+            @media all and (max-width: 767px) {
+                max-height: 172px;
+            }
+        }
+
+        @media all and (max-width: 767px) {
+            height: 241px;
+        }
+    }
+
+    &-item {
+        margin-bottom: 15px;
+        padding: 5px 20px;
+        border-radius: 7px;
+        background-color: $grey-light-2;
+
+        @media all and (max-width: 767px) {
+            div:first-child {
+                margin-top: -5px;
+            }
+
+            padding: 8px 10px;
+            margin-bottom: 5px;
+            display: block!important;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-name {
+            font-size: $fz-5;
+            line-height: 100%;
+            color: $text-primary;
+
+            @media all and (max-width: 767px) {
+                font-size: 11px;
+                line-height: 100%;
+            }
+        }
+
+        &-tranche {
+            font-size: $fz-6;
+            color: $grey-dark;
+            line-height: 100%;
+
+            @media all and (max-width: 767px) {
+                font-size: 9px;
+                line-height: 10px;
+            }
+        }
+
+        &-status {
+            padding: 0;
+            font-size: $fz-5;
+            line-height: 100%;
+
+            @media all and (max-width: 767px) {
+                font-size: 9px;
+                line-height: 10px;
+                margin-top: 4px;
+            }
+
+            a {
+                font-size: $fz-5;
+                line-height: 100%;
+
+                @media all and (max-width: 767px) {
+                    font-size: 9px;
+                    line-height: 10px;
+                    margin-top: 4px;
+                }
+            }
+        }
+
+        &-button {
+            padding: 0;
+            height: auto;
+            font-size: $fz-5;
+            line-height: 100%;
+            border: none;
+            color: $main;
+
+            i {
+                color: $main;
+                font-size: $fz-5;
+                line-height: 100%;
+            }
+
+            @media all and (max-width: 767px) {
+                font-size: 11px;
+
+                i {
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}

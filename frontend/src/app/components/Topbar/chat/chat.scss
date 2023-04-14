@@ -1,0 +1,26 @@
+.chat {
+    position: relative;
+
+    &-icon {
+        width: 29px;
+        height: 26px;
+        background-image: url('./../icons/chat.svg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &-count {
+        position: absolute;
+        min-width: 21px;
+        height: 21px;
+        border: 1px solid white;
+        top: -45%;
+        right: -4px;
+        padding: 0 3px;
+        border-radius: 50%;
+        color: white;
+        font-size: 12px;
+        line-height: 100%;
+    }
+}

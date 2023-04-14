@@ -1,0 +1,7 @@
+.logo-custom {
+    a {
+        @include fz-3;
+        line-height: 21px;
+        color: $text-primary!important;
+    }
+}

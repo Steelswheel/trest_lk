@@ -1,0 +1,50 @@
+@import '../../styles/custom-variables';
+
+.aside-custom {
+    background: $main-gradient;
+
+    &-logo {
+        padding: 20px 25px 20px 20px!important;
+        background-color: transparent;
+        height: auto!important;
+    }
+
+    &-toggle {
+        svg {
+            path {
+                opacity: 1;
+                fill: #FFF;
+            }
+        }
+    }
+
+    &-menu {
+        @media all and (max-width: 991px) {
+            margin: 2rem 0;
+        }
+
+        .menu {
+            &-link {
+                * {
+                    color: white!important;
+                }
+    
+                i {
+                    font-size: 18px;
+                    margin-right: 12px;
+                }
+
+                &.active {
+                    background-color: $main-light;
+                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            &-title {
+                @include fz-5;
+                font-weight: 700;
+                white-space: nowrap!important;
+            }
+        }
+    }
+}

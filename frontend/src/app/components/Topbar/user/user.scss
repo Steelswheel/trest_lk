@@ -1,0 +1,27 @@
+.user {
+    &-name {
+        color: $text-primary;
+        font-size: 17px;
+        line-height: 20px;
+        margin-right: 15px;
+
+        @media all and (max-width: 767px) {
+            display: none;
+            margin: 0;
+        }
+    }
+
+    &-avatar {
+        width: 45px;
+        height: 45px;
+        border-radius: 7px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        @media all and (max-width: 767px) {
+            width: 35px;
+            height: 35px;
+        }
+    }
+}

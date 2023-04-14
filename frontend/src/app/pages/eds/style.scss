@@ -1,0 +1,21 @@
+//Components styles
+@import './../../components/Grid/style.scss';
+@import './../../styles/custom-variables';
+
+.eds-list {
+    td {
+        @include fz-6;
+
+        * {
+            @include fz-6;
+        }
+    }
+
+    th {
+        background-color: $main-light-2!important;
+
+        * {
+            background-color: $main-light-2!important;
+        }
+    }
+}
